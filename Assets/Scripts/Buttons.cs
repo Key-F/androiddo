@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,12 +25,13 @@ public class Buttons : MonoBehaviour {
         {
             case "button":
 
-                if (EditorUtility.DisplayDialog("HighScore", "Wanna reset highscore?", "Yes", "No"))
-                    PlayerPrefs.SetInt("HighScore", 0);
+               // if (EditorUtility.DisplayDialog("HighScore", "Wanna reset highscore?", "Yes", "No"))
+                 //   PlayerPrefs.SetInt("HighScore", 0);
                 break;
                 
             case "play":
                 SceneManager.LoadScene("play");
+                Movement.score = 0; // чтобы не абузился счет
                 break;
             
         }
